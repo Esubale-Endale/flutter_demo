@@ -1,4 +1,4 @@
-# flutter_session_2
+# flutter_demo
 
 A new Flutter project.
 

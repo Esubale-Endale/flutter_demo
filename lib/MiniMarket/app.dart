@@ -10,38 +10,43 @@ class MiniMarketApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: const HomeScreen(),
+      home: const MyHomePage(title: 'Mini Market'),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
-
-  final List<Widget> pages = const [
-    Center(child: Text('Home Page')),
-    Center(child: Text('Cart Page')),
-    Center(child: Text('Settings Page')),
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text('Mini Market', style: TextStyle(color: Colors.black)),
+        title: Text(widget.title, style: const TextStyle(color: Colors.black)),
       ),
-      body: Center(child: pages[currentIndex]),
+      body: Center(
+        child: IndexedStack(
+          index: currentIndex,
+          children: const [
+            Center(child: Text('Home Page')),
+            Center(child: Text('Cart Page')),
+            Center(child: Text('Settings Page')),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),

@@ -4,7 +4,7 @@ class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key});
 
   @override
-  _ProductDetailState createState() => _ProductDetailState();
+  State<ProductDetail> createState() => _ProductDetailState();
 }
 
  class _ProductDetailState extends State<ProductDetail> {

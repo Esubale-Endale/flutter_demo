@@ -1,0 +1,12 @@
+import 'package:flutter/material.dart';
+
+List productList = [
+  {"id": 1, "title": "Laptop", "price": 19.0, "icon": Icons.laptop_mac},
+  {"id": 2, "title": "Iphone pro", "price": 22.0, "icon": Icons.phone_iphone},
+  {"id": 3, "title": "Ipad", "price": 35.0, "icon": Icons.tablet_mac},
+  {"id": 4, "title": "Headphones", "price": 10.0, "icon": Icons.headphones},
+  {"id": 5, "title": "Camera", "price": 15.0, "icon": Icons.camera_alt},
+  {"id": 6, "title": "Watch", "price": 12.0, "icon": Icons.watch},
+  {"id": 7, "title": "Speaker", "price": 8.0, "icon": Icons.speaker},
+  {"id": 8, "title": "Keyboard", "price": 5.0, "icon": Icons.keyboard},
+];

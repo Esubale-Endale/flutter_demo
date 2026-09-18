@@ -51,7 +51,7 @@ class CounterPage extends StatelessWidget {
                       onPressed: () {
                         context.read<CounterBloc>().add(Decrement());
                       },
-                      child: const Text('-'),
+                      child: const Icon(Icons.remove),
                     ),
 
                     const SizedBox(width: 20),
@@ -60,7 +60,7 @@ class CounterPage extends StatelessWidget {
                       onPressed: () {
                         context.read<CounterBloc>().add(Increment());
                       },
-                      child: const Text('+'),
+                      child: const Icon(Icons.add),
                     ),
 
                     const SizedBox(width: 20),
@@ -69,7 +69,7 @@ class CounterPage extends StatelessWidget {
                       onPressed: () {
                         context.read<CounterBloc>().add(Reset());
                       },
-                      child: const Text('0'),
+                      child: const Icon(Icons.restart_alt),
                     ),
                   ],
                 ),

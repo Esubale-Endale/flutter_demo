@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+    // {
+    //   "path": "lib",
+    // },
+    // {
+    //   "path": "lib/Counter",
+    // },
+    // {
+    //   "path": "lib/Demo",
+    // }, 
+    {
+      "path": "lib/MiniMarket",
+    },
+  ],
+  "settings": {}
+}

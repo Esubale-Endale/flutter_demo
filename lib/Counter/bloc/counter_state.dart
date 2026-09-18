@@ -5,7 +5,7 @@ sealed class CounterState {}
 
 final class CounterInitial extends CounterState {}
 
-class CounterLoadedState extends CounterState{
+class CounterLoadedState extends CounterState {
   final int count;
-  CounterLoadedState({required this.count});
+  CounterLoadedState({required this.count });
 }

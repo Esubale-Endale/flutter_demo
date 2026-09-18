@@ -7,7 +7,13 @@ class CounterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CounterPage();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BlocProvider(
+        create: (context) => CounterBloc(),
+        child: const CounterPage(),
+      ),
+    );
   }
 }
 
@@ -31,9 +37,43 @@ class CounterPage extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(title: const Text('Counter')),
           body: Center(
-            child: Text(
-              '$count',
-              style: Theme.of(context).textTheme.displayLarge,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('$count', style: Theme.of(context).textTheme.displayLarge),
+
+                const SizedBox(height: 30),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        context.read<CounterBloc>().add(Decrement());
+                      },
+                      child: const Text('-'),
+                    ),
+
+                    const SizedBox(width: 20),
+
+                    ElevatedButton(
+                      onPressed: () {
+                        context.read<CounterBloc>().add(Increment());
+                      },
+                      child: const Text('+'),
+                    ),
+
+                    const SizedBox(width: 20),
+
+                    ElevatedButton(
+                      onPressed: () {
+                        context.read<CounterBloc>().add(Reset());
+                      },
+                      child: const Text('0'),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         );

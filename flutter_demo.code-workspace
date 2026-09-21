@@ -11,10 +11,13 @@
     // },
     // {
     //   "path": "lib/Demo",
-    // }, 
+    // },
     {
       "path": "lib/MiniMarket",
     },
+    {
+      "path": "lib/MiniMarket-beki",
+    }
   ],
   "settings": {}
 }

@@ -12,7 +12,7 @@ const List<String> kCategories = [
   'furniture',
 ];
 
-/// Every category gets its own icon, so a product does not need a photo.
+// Every category gets its own icon, so a product does not need a photo.
 IconData iconForCategory(String category) {
   switch (category) {
     case 'smartphones':
@@ -34,8 +34,8 @@ IconData iconForCategory(String category) {
   }
 }
 
-/// Every category also gets its own colour, used for the icon and
-/// (in a lighter shade) for the box behind the icon.
+// Every category also gets its own colour, used for the icon and
+// (in a lighter shade) for the box behind the icon.
 Color colorForCategory(String category) {
   switch (category) {
     case 'smartphones':

@@ -1,13 +1,13 @@
 import '../models/product.dart';
 
-/// Holds all the data of the app in memory.
-///
-/// Everything is `static`, so any screen can read or change the same lists
-/// by writing `MarketStore.products` or `MarketStore.cart`. After changing
-/// something, the screen calls `setState` to redraw itself.
-///
-/// (The data is lost when the app closes. A real app would use a database
-/// or a server here.)
+// / Holds all the data of the app in memory.
+// /
+// / Everything is `static`, so any screen can read or change the same lists
+// / by writing `MarketStore.products` or `MarketStore.cart`. After changing
+// / something, the screen calls `setState` to redraw itself.
+// /
+// / (The data is lost when the app closes. A real app would use a database
+// / or a server here.)
 class MarketStore {
   // Nobody should create a MarketStore object.
   MarketStore._();

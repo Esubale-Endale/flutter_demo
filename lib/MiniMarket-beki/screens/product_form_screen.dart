@@ -4,11 +4,8 @@ import '../data/categories.dart';
 import '../data/market_store.dart';
 import '../models/product.dart';
 
-/// One screen for both jobs:
-/// - `ProductFormScreen()`            -> add a new product
-/// - `ProductFormScreen(product: p)`  -> edit the product `p`
 class ProductFormScreen extends StatefulWidget {
-  final Product? product; // will be null while adding a product
+  final Product? product;
 
   const ProductFormScreen({super.key, this.product});
 
